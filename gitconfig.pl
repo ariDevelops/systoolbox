@@ -48,6 +48,8 @@ my $confmail = system("git config --global user.email $mail");
 
 #install function
 sub runinstall {
-
+my $install = system("sudo apt-get install git");
+($install)? print color("bright_blue"), "running installation..\n",color("reset"): 
+print color("red"), "cannot install ! $&\n",color("reset");
 
 }
