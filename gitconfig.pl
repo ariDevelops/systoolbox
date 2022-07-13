@@ -41,7 +41,7 @@ print color("bright_yellow"), "Enter your name for git: ",color("reset"); chomp(
 my $confname = system("git config --global user.name \"$name\"");
 
 print color("bright_yellow"), "Email address: ",color("reset"); chomp(my $mail = <STDIN>);
-my $confmail = system("git config --global user.email $mail");
+my $confmail = system("git config --global user.email \"$mail\"");
 
 }
 
